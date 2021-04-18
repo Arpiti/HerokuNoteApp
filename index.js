@@ -4,6 +4,7 @@ const cors = require('cors')
 
 app.use(express.json()); //using express json parser to parse POST req data and process it
 app.use(cors());
+app.use(express.static('build')) //  Any Get request first go to build directory
 
 let notes = [{
   id: 1,
